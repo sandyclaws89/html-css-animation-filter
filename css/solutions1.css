@@ -1,10 +1,214 @@
-.ex-1-square:hover{
-    background-color: red;
-    transition: background-color 5s;
-}
+
+    /* EX1 */
+
+    .ex-1-square{
+        transition: 3s; /*APPLICA UNA TRANSIZIONE CHE DURA 3 SECONDI */
+    }
+    .ex-1-square:hover{
+        background-color: red; /*ON HOVER APPLICA UN BCK COLOR*/
+    }
+
+    /* EX2 */
+    
+    .ex-2-square{
+        transition: 3s;
+    }
+    .ex-2-square:active{
+        width: 100%;
+    }
+
+    /* EX3 */
+    .ex-3-square{
+        transition: border-radius 3s; /*APPLICA UNA TRANSIZIONE CHE DURA 3 SECONDI QUANDO C'E' UN BORDER RADIUS */
+    }
+    .ex-3-square:hover{
+        border-radius: 50%;
+    }
+
+    /* EX4 */
+    .ex-4-square{
+        transition: 3s;
+    }
+
+    .ex-4-square:hover {
+        background-color: #f5f5f5;
+    }
+
+   /* EX5  */
+   .ex-5-square{
+       transition: 3s;
+   }
+    .ex-5-square:hover{
+        transform: scale(1.5); /*TRASFORMA IN SCALA 1.5 ON HOVER*/
+    }
+    .ex-5-square:active{
+        transform: scale(0.5);  /*TRASFORMA IN SCALA 0.5 ON ACTIVE*/
+    }
+
+    /* EX6  */
+    .ex-6-img:hover{
+        filter: grayscale(1); /*APPLICA IL FILTRO BIANCO E NERO*/
+    }
+    
+    /* EX7  */
+    .ex-7-img{
+        transition: 3s;
+    }
+    .ex-7-img:hover {
+        filter: drop-shadow(30px 10px 4px #4444dd) sepia(1); /*APPLICA DOPPIO FILTRO ALLA STESSA IMG*/       
+    }
 
 
-.ex-2-square:active{
-   width: 100%;
-    transition: width 5s; 
-}
+    /* EX8  */
+    .ex-8-img{
+        transition: 5s;    
+    }
+    .ex-8-img:hover {
+        border-radius: 20px;
+        filter: contrast(30) hue-rotate(90deg);
+    }
+
+    /* EX9 */
+    .ex-9-img{
+        transition: 3s;
+    }
+    .ex-9-img:hover{
+        border-radius: 25px;
+        transform: scale(1.5);
+        filter: drop-shadow(30px 10px 4px #4444dd) sepia(1);
+    }
+
+
+    /* EX10 */
+    .ex-10-icon{
+        animation-name: example; /*NOME IDENTIFICATIVO DELL'ANIMAZIONE*/
+        animation-duration: 3s; /*DURATA TOTALE DELL'ANIMAZIONE*/
+        animation-timing-function: linear; /*ANDAMENTO NEL TEMPO DELL'ANIMAZIONE*/
+        animation-iteration-count:infinite; /*CONTATORE DELLE ANIMAZIONI*/
+    }
+    @keyframes example{
+        0% {
+            transform: rotate(1turn); /*DAL PUNTO DI PARTENZA RUOTA DI UN GIRO COMPLETO*/
+        }      
+    }
+
+    /* EX11  */
+    .ex-11-icon:hover {
+        animation-name :example2;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes example2 {
+        75%{
+            transform: rotate(270deg); /*QUANDO ARRIVI AL 75% DEVI ESSERE RUOTATO DI 270 GRADI, SE NON GLI DAI ALTRI ISTRUZIONI TORNA AL PUNTO DI PARTENZA*/
+        }
+    }
+
+
+
+    
+
+    /* GLI ULTIMI DUE ESERCIZI LI HO COPIATI PER USARLI COME MODELLO MA NON LI HO CAPITI, DOMANI IN CORREZIONE COMMENTERO' LA SPIEGAZIONE. */
+
+
+
+
+
+
+
+    /* EX12  */
+
+    .ex-12-button:hover .ex-12-bottom-white {
+        animation: moveBottomWhite 2s linear;
+        animation-iteration-count: infinite;
+    }
+    @keyframes moveBottomWhite {
+        0% {
+            right: 20%;
+        }
+        50% {
+            right: calc(100% - 60px);
+        }
+        100% {
+            right: 20%;
+        }
+    }
+
+    .ex-12-button:hover .ex-12-top-white {
+        animation: movetopWhite 2s linear;
+        animation-iteration-count: infinite;
+    }
+    @keyframes movetopWhite {
+        0% {
+            left: 20%;
+        }
+        50% {
+            left: calc(100% - 60px);
+        }
+        100% {
+            left: 20%;
+        }
+    }
+
+    /* EX13  */
+    .ex-13-button:hover .ex-13-top-white {
+        animation: moveTopWhiteCompletely 2s linear;
+    }
+    @keyframes moveTopWhiteCompletely {
+        0% {
+            left: 10%;
+            top: -10px;
+        }
+        30% {
+            left: calc(100% - 30px);
+            top: -10px;
+        }
+        45% {
+            left: calc(100% - 30px);
+            top: 100%;
+        }
+        75% {
+            left: 0;
+            top: 100%;
+        }
+        90% {
+            left: -15px;
+            top: -10px;
+        }
+        100% {
+            left: 10%;
+            top: -10px;
+        }
+    }
+    .ex-13-button:hover .ex-13-bottom-white {
+        animation: moveBottomWhiteCompletely 2s linear;
+    }
+    @keyframes moveBottomWhiteCompletely {
+        0% {
+            bottom: -10px;
+            right: 20%;
+        }
+        30% {
+            right: calc(100% - 30px);
+            bottom: -10px;
+        }
+        45% {
+            right: calc(100% - 30px);
+            bottom: 100%;
+        }
+        75% {
+            right: 0;
+            bottom: 100%;
+        }
+        90% {
+            right: -15px;
+            bottom: -10px;
+        }
+        100% {
+            bottom: -10px;
+            right: 20%;
+        }
+    }
+    
